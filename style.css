@@ -18,7 +18,10 @@ header {
     width: 100%;
     padding: 20px 100px;
     z-index: 99;
-    background: palegreen;
+    background: url('bg.mp4');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
