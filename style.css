@@ -11,6 +11,18 @@ body {
     min-height: 100vh;
 }
 
+header::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -18,13 +30,21 @@ header {
     width: 100%;
     padding: 20px 100px;
     z-index: 99;
-    background: url('bg.mp4');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+header::after {
+    background: url('bg.mp4') no-repeat center center fixed;
+    background-size: cover;
+    filter: brightness(0.7); /* apply a brightness filter to make the video darker */
+    -webkit-filter: brightness(0.7);
+    -moz-filter: brightness(0.7);
+    -o-filter: brightness(0.7);
+    -ms-filter: brightness(0.7);
+    z-index: -1; /* move the video behind the content of the header */
+    position: relative;
 }
 
 .logo {
