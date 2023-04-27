@@ -23,24 +23,29 @@ header {
     align-items: center;
 }
 
-#bg-container {
+.video-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     overflow: hidden;
+    z-index: -1;
 }
 
-#bg {
+.video-container video {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    filter: brightness(0.7);
-    background-color: rgba(0, 0, 0, 0.4);;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: brightness(50%);
 }
 
+main {
+    position: relative;
+    z-index: 1;
+}
 
 .logo {
     font-size: 2em;
