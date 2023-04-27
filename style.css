@@ -28,6 +28,7 @@ header {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    transform: translate(-50%, -50%);
 }
 
 .bg-container video {
